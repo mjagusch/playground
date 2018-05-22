@@ -36,6 +36,5 @@ C:\Projects\playground\TestUpgradeDeployment\VisualObjects.Common\bin\x64\Debug\
 C:\Projects\playground\TestUpgradeDeployment\VisualObjects.Common\bin\x64\Debug\System.Fabric.xml
 C:\Projects\playground\TestUpgradeDeployment\VisualObjects.Common\bin\x64\Debug\en-us\Microsoft.ServiceFabric.Internal.Strings.resources.dll
 C:\Projects\playground\TestUpgradeDeployment\VisualObjects.Common\bin\x64\Debug\en-us\System.Fabric.Strings.resources.dll
-C:\Projects\playground\TestUpgradeDeployment\VisualObjects.Common\obj\x64\Debug\VisualObjects.Common.csprojResolveAssemblyReference.cache
 C:\Projects\playground\TestUpgradeDeployment\VisualObjects.Common\obj\x64\Debug\VisualObjects.Common.dll
 C:\Projects\playground\TestUpgradeDeployment\VisualObjects.Common\obj\x64\Debug\VisualObjects.Common.pdb

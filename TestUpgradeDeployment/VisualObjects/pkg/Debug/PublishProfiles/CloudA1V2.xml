@@ -16,11 +16,11 @@
                                     StoreName="My" />
 
   -->
-  <ClusterConnectionParameters ConnectionEndpoint="mjtestcluster.eastus.cloudapp.azure.com:19000"
+  <ClusterConnectionParameters ConnectionEndpoint="mj-a1v2-cluster.eastus.cloudapp.azure.com:19000"
                                X509Credential="true"
-                               ServerCertThumbprint="b8a81117bc30165f4ae6f2b0d1b2770423b2ef57"
+                               ServerCertThumbprint="1d72aa6ce44a932580e84dbaf7b5732caa6b7fbc"
                                FindType="FindByThumbprint"
-                               FindValue="b8a81117bc30165f4ae6f2b0d1b2770423b2ef57"
+                               FindValue="1d72aa6ce44a932580e84dbaf7b5732caa6b7fbc"
                                StoreLocation="LocalMachine"
                                StoreName="My" />
   <ApplicationParameterFile Path="..\ApplicationParameters\Cloud.xml" />

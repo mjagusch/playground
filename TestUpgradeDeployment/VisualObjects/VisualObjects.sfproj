@@ -26,12 +26,17 @@
     <None Include="Scripts\Deploy-FabricApplication.ps1" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="OctoScripts\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\VisualObjects.ActorService\VisualObjects.ActorService.csproj" />
     <ProjectReference Include="..\VisualObjects.WebService\VisualObjects.WebService.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationParameters\Local.1Node.xml" />
     <Content Include="packages.config" />
+    <Content Include="PublishProfiles\CloudF1x3.xml" />
+    <Content Include="PublishProfiles\CloudF1.xml" />
     <Content Include="PublishProfiles\Local.1Node.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
@@ -44,4 +49,5 @@
     <Error Condition="!Exists('..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.6.4\build\Microsoft.VisualStudio.Azure.Fabric.Application.props')" Text="Unable to find the '..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.6.4\build\Microsoft.VisualStudio.Azure.Fabric.Application.props' file. Please restore the 'Microsoft.VisualStudio.Azure.Fabric.MSBuild' Nuget package." />
     <Error Condition="!Exists('..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.6.4\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets')" Text="Unable to find the '..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.6.4\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets' file. Please restore the 'Microsoft.VisualStudio.Azure.Fabric.MSBuild' Nuget package." />
   </Target>
+  <Import Project="..\tools\OctoSFPackage.targets" Condition="Exists('..\tools\OctoSFPackage.targets')" />
 </Project>
