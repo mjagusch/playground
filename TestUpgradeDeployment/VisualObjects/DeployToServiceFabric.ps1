@@ -44,10 +44,10 @@
 
 <#
 .SYNOPSIS 
-Platform PreventicePlatform.CloudServices Application Service Octo Deploy script
+VisualObjects test Octo Deploy script
 
 .DESCRIPTION
-This script deploys the Services for the CloudServices Service Fabric application type to a cluster.
+This script deploys the Services for the VisualObjects test application type to a cluster.
 
 .PARAMETER ConstrainedNodeTypes
 Indicates whether NodeType constraints should be applied when deploying the services. The default value is $false
@@ -60,7 +60,7 @@ This is the name of the CPU node type. The default value is CPUNodeType
 Param
 (
     [String]
-    $ConstrainedNodeTypes = $true,
+    $ConstrainedNodeTypes = $false,
 
     [String]
     $CPUNodeType = "CPUworker"
@@ -192,11 +192,9 @@ else
     if ($CopyPackageTimeoutSec)
     {
         Publish-NewServiceFabricApplication -ApplicationPackagePath $ApplicationPackagePath -ApplicationParameterFilePath $publishProfile.ApplicationParameterFile -Action $Action -ApplicationParameter $ApplicationParameter -OverwriteBehavior $OverwriteBehavior -SkipPackageValidation:$SkipPackageValidation -CopyPackageTimeoutSec $CopyPackageTimeoutSec -ErrorAction Stop
-        .\Scripts\DeployServices -PublishProfileFile $ApplicationPackagePath\$PublishProfileFile -UseExistingClusterConnection $true -ConstrainedNodeTypes $ConstrainedNodeTypes -CPUNodeType $CPUNodeType
     }
     else
     {
         Publish-NewServiceFabricApplication -ApplicationPackagePath $ApplicationPackagePath -ApplicationParameterFilePath $publishProfile.ApplicationParameterFile -Action $Action -ApplicationParameter $ApplicationParameter -OverwriteBehavior $OverwriteBehavior -SkipPackageValidation:$SkipPackageValidation -ErrorAction Stop
-        .\Scripts\DeployServices -PublishProfileFile $ApplicationPackagePath\$PublishProfileFile -UseExistingClusterConnection $true -ConstrainedNodeTypes $ConstrainedNodeTypes -CPUNodeType $CPUNodeType
     }
 }
